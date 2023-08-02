@@ -32,11 +32,13 @@ dependencies:
   email_validator: ^2.1.17
   firebase_auth: ^4.7.2
   firebase_core: ^2.15.0
+  cloud_firestore: ^4.8.4
   flutter:
     sdk: flutter
   google_fonts: ^5.1.0
   open_mail_app: ^0.4.5
   provider: ^6.0.5
+  intl: ^0.18.1
 
 dev_dependencies:
 

@@ -25,9 +25,19 @@ class AuthProvider with ChangeNotifier {
   Future<void> register(String name, String email, String password) async {
     await AuthController.createUserWithEmailAndPassword(email, password);
 
-    if (AuthController.status['code'] == 200) {
-      _currentUser = AuthController.firebaseAuth.currentUser;
-      _status = AuthController.status;
+    if (AuthController.status['code'] == 200 ||
+        AuthController.status['code'] == 403) {
+      await UserController.create(AppUser(
+              id: AuthController.firebaseAuth.currentUser?.uid,
+              name: name,
+              email: email))
+          .whenComplete(() => _status = UserController.status);
+
+      if (AuthController.status['code'] == 200 &&
+          UserController.status['code'] == 200) {
+        _currentUser = AuthController.firebaseAuth.currentUser;
+        _status = AuthController.status;
+      }
     } else {
       _currentUser = null;
       _status = AuthController.status;

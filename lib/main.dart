@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
           return user.currentUser == null
               ? const TodoAuthScreen()
               : user.currentUser!.emailVerified
-                  ? const DummyScreen()
+                  ? const TodoTasksScreen()
                   : const TodoEmailVerificationScreen();
         }),
       ),

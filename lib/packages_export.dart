@@ -6,6 +6,7 @@ export 'package:google_fonts/google_fonts.dart';
 export 'package:firebase_core/firebase_core.dart';
 export 'firebase_options.dart';
 export 'package:firebase_auth/firebase_auth.dart';
+export 'package:cloud_firestore/cloud_firestore.dart';
 
 // Validation Checkers Export
 export 'package:email_validator/email_validator.dart';
@@ -18,6 +19,7 @@ export 'services/service.dart';
 export 'widgets/widgets.dart';
 export 'providers/provider.dart';
 export 'functions/funtion.dart';
+export 'models/model.dart';
 
 // State Management
 export 'package:provider/provider.dart';
