@@ -1,7 +1,11 @@
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/services.dart';
 import '../packages_export.dart';
 
 class UserController {
   static final _userCollection = FirebaseFirestore.instance.collection('user');
+
+  static final _storage = FirebaseStorage.instance;
 
   static Map<String, dynamic> status = {'code': 200, 'message': ''};
 
@@ -45,5 +49,12 @@ class UserController {
     } catch (e) {
       status = {'code': '500', 'message': e.toString()};
     }
+  }
+
+  static Future<String> uploadImage(Uint8List file, String name) async {
+    final ref = _storage.ref("images/$name");
+    final uploadTask = ref.putData(file);
+    final snapshot = await uploadTask.whenComplete(() {});
+    return await snapshot.ref.getDownloadURL();
   }
 }

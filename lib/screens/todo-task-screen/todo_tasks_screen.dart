@@ -58,6 +58,8 @@ class _TodoTasksScreenState extends State<TodoTasksScreen> {
             ];
           }, onSelected: (value) {
             if (value == 0) {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const TodoProfileScreen()));
             } else if (value == 1) {
               context.read<AuthProvider>().logout();
             }
