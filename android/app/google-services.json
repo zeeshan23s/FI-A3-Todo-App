@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81894199230",
+    "project_id": "fi-a3-todo-application",
+    "storage_bucket": "fi-a3-todo-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81894199230:android:4f8602fad0eb8b325ab3ef",
+        "android_client_info": {
+          "package_name": "com.example.todo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81894199230-07mjf8cdit7ljbsv94p0o0q1tvom21hi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAQTblr0XeEuzwWczOzgwHcWuIexeG85A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81894199230-07mjf8cdit7ljbsv94p0o0q1tvom21hi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
