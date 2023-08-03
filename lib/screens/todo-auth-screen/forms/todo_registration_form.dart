@@ -165,11 +165,12 @@ class _TodoRegistrationFormState extends State<TodoRegistrationForm> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                        AuthController.status['message'],
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(color: primaryColor)),
+                                      AuthController.status['message'],
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium
+                                          ?.copyWith(color: primaryColor),
+                                    ),
                                     backgroundColor:
                                         AuthController.status['code'] == 200
                                             ? Colors.green
