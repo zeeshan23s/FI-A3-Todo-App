@@ -1,12 +1,16 @@
 import '../packages_export.dart';
 
 class AppUser {
-  String? id;
-  String? name;
+  late String id;
+  late String name;
   String? imageURL;
-  String? email;
+  late String email;
 
-  AppUser({this.id, this.name, this.imageURL, this.email});
+  AppUser(
+      {required this.id,
+      required this.name,
+      this.imageURL,
+      required this.email});
 
   AppUser.fromFirestore(QueryDocumentSnapshot doc) {
     id = doc['id'];

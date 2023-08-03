@@ -31,7 +31,7 @@ class TaskContainer extends StatelessWidget {
                     SizedBox(
                       width: ScreenHelper.screenWidth(context) * 0.65,
                       child: Text(
-                        task.title ?? 'No Title',
+                        task.title,
                         style: Theme.of(context)
                             .textTheme
                             .bodyLarge
@@ -57,7 +57,7 @@ class TaskContainer extends StatelessWidget {
                                 ScreenHelper.screenHeight(context) * 0.05),
                           ),
                           child: Text(
-                            task.intensity!,
+                            task.intensity,
                             style: Theme.of(context)
                                 .textTheme
                                 .bodySmall
@@ -71,14 +71,14 @@ class TaskContainer extends StatelessWidget {
                           padding: EdgeInsets.all(
                               ScreenHelper.screenWidth(context) * 0.015),
                           decoration: BoxDecoration(
-                            color: task.isComplete!
+                            color: task.isComplete
                                 ? completedColor
                                 : progressColor,
                             borderRadius: BorderRadius.circular(
                                 ScreenHelper.screenHeight(context) * 0.05),
                           ),
                           child: Text(
-                            task.isComplete! ? 'Completed' : 'In Progress',
+                            task.isComplete ? 'Completed' : 'In Progress',
                             style: Theme.of(context)
                                 .textTheme
                                 .bodySmall
@@ -95,7 +95,7 @@ class TaskContainer extends StatelessWidget {
                     SizedBox(width: ScreenHelper.screenWidth(context) * 0.01),
                     Text(
                         DateFormat.yMMMd()
-                            .format(DateTime.parse(task.createdAt!)),
+                            .format(DateTime.parse(task.createdAt)),
                         style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 )

@@ -1,9 +1,5 @@
 import '../../packages_export.dart';
 
-part 'forms/todo_login_form.dart';
-part 'forms/todo_registration_form.dart';
-part 'forms/todo_password_reset_form.dart';
-
 class TodoAuthScreen extends StatelessWidget {
   const TodoAuthScreen({super.key});
 
@@ -36,7 +32,7 @@ class TodoAuthScreen extends StatelessWidget {
                     ),
                     SizedBox(height: ScreenHelper.screenHeight(context) * 0.04),
                     CustomizedButton(
-                      onPressed: () => customModelBottomSheet(
+                      onPressed: () => CustomizedModelSheets.bottomSheet(
                           context, const TodoLoginForm()),
                       child: Text(
                         'Login',
@@ -48,7 +44,7 @@ class TodoAuthScreen extends StatelessWidget {
                     ),
                     SizedBox(height: ScreenHelper.screenHeight(context) * 0.02),
                     CustomizedButton(
-                      onPressed: () => customModelBottomSheet(
+                      onPressed: () => CustomizedModelSheets.bottomSheet(
                           context, const TodoRegistrationForm()),
                       backgroundColor: secondaryColor,
                       child: Text(
