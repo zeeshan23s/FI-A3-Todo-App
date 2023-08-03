@@ -1,4 +1,4 @@
-part of '../todo_auth_screen.dart';
+import '../../../packages_export.dart';
 
 class TodoRegistrationForm extends StatefulWidget {
   const TodoRegistrationForm({super.key});
@@ -201,7 +201,8 @@ class _TodoRegistrationFormState extends State<TodoRegistrationForm> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
-                      customModelBottomSheet(context, const TodoLoginForm());
+                      CustomizedModelSheets.bottomSheet(
+                          context, const TodoLoginForm());
                     },
                     child: RichText(
                       text: TextSpan(

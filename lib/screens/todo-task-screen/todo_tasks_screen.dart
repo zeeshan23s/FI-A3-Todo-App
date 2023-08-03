@@ -13,15 +13,9 @@ class TodoTasksScreen extends StatefulWidget {
 }
 
 class _TodoTasksScreenState extends State<TodoTasksScreen> {
-  Map<String, int> screenTabs = {};
+  final Map<String, int> screenTabs = {'Completed': 65, 'To Do': 45};
 
   String selectedKey = 'Completed';
-
-  @override
-  void initState() {
-    super.initState();
-    screenTabs = {'Completed': 65, 'To Do': 45};
-  }
 
   @override
   Widget build(BuildContext context) {

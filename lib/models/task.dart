@@ -1,22 +1,22 @@
 import '../packages_export.dart';
 
 class Task {
-  String? id;
-  String? title;
+  late String id;
+  late String title;
   String? description;
-  String? intensity;
-  bool? isComplete;
-  String? createdAt;
-  String? uid;
+  late String intensity;
+  late bool isComplete;
+  late String createdAt;
+  late String uid;
 
   Task(
-      {this.id,
-      this.title,
+      {required this.id,
+      required this.title,
       this.description,
-      this.intensity,
-      this.isComplete,
-      this.createdAt,
-      this.uid});
+      required this.intensity,
+      required this.isComplete,
+      required this.createdAt,
+      required this.uid});
 
   Task.fromFirestore(QueryDocumentSnapshot doc) {
     id = doc['id'];
