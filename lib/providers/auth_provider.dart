@@ -28,7 +28,7 @@ class AuthProvider with ChangeNotifier {
     if (AuthController.status['code'] == 200 ||
         AuthController.status['code'] == 403) {
       await UserController.create(AppUser(
-              id: AuthController.firebaseAuth.currentUser?.uid,
+              id: AuthController.firebaseAuth.currentUser!.uid,
               name: name,
               email: email))
           .whenComplete(() => _status = UserController.status);

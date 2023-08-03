@@ -10,22 +10,21 @@ class TodoAddScreen extends StatefulWidget {
 }
 
 class _TodoAddScreenState extends State<TodoAddScreen> {
-  TextEditingController _titleController = TextEditingController();
+  final TextEditingController _titleController = TextEditingController();
 
-  TextEditingController _descriptionController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
 
-  String? _intensity = 'Low';
+  String _intensity = 'Low';
 
   bool _hasCompleted = false;
 
   @override
   void initState() {
     if (widget.isOld) {
-      _titleController = TextEditingController(text: widget.task!.title);
-      _descriptionController =
-          TextEditingController(text: widget.task!.description);
+      _titleController.text = widget.task!.title;
+      _descriptionController.text = widget.task!.description ?? '';
       _intensity = widget.task!.intensity;
-      _hasCompleted = widget.task!.isComplete!;
+      _hasCompleted = widget.task!.isComplete;
     }
 
     _titleController.addListener(() {});
@@ -161,7 +160,7 @@ class _TodoAddScreenState extends State<TodoAddScreen> {
                       intensity: _intensity,
                       isComplete: _hasCompleted,
                       createdAt: DateTime.now().toString(),
-                      uid: AuthController.firebaseAuth.currentUser?.uid))
+                      uid: AuthController.firebaseAuth.currentUser!.uid))
                   .whenComplete(() {
                 Navigator.pop(context);
                 ScaffoldMessenger.of(context).showSnackBar(
@@ -180,12 +179,13 @@ class _TodoAddScreenState extends State<TodoAddScreen> {
               });
             } else {
               TaskController.create(Task(
+                      id: '',
                       title: _titleController.text,
                       description: _descriptionController.text,
                       intensity: _intensity,
                       isComplete: _hasCompleted,
                       createdAt: DateTime.now().toString(),
-                      uid: AuthController.firebaseAuth.currentUser?.uid))
+                      uid: AuthController.firebaseAuth.currentUser!.uid))
                   .whenComplete(() {
                 Navigator.pop(context);
                 ScaffoldMessenger.of(context).showSnackBar(
