@@ -59,7 +59,6 @@ class TodoAuthScreen extends StatelessWidget {
                               .read<AuthProvider>()
                               .googleLogin()
                               .whenComplete(() {
-                            Navigator.pop(context);
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text(AuthController.status['message'],
