@@ -52,4 +52,18 @@ class AuthProvider with ChangeNotifier {
 
     notifyListeners();
   }
+
+  Future<void> googleLogin() async {
+    UserCredential? user = await AuthController.signInWithGoogle();
+
+    if (AuthController.status['code'] == 200) {
+      _currentUser = user?.user;
+      debugPrint(_currentUser?.uid);
+    } else {
+      _currentUser = null;
+    }
+
+    _status = AuthController.status;
+    notifyListeners();
+  }
 }

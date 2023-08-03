@@ -82,4 +82,29 @@ class AuthController {
       status = {'code': 500, 'message': e.toString()};
     }
   }
+
+  static Future<UserCredential?> signInWithGoogle() async {
+    try {
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+      final GoogleSignInAuthentication? googleAuth =
+          await googleUser?.authentication;
+
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
+      );
+
+      UserCredential? user =
+          await FirebaseAuth.instance.signInWithCredential(credential);
+      status = {'code': 200, 'message': 'Login Successful!'};
+
+      return user;
+    } on FirebaseException catch (e) {
+      status = {'code': e.code, 'message': e.message};
+    } catch (e) {
+      status = {'code': 500, 'message': e.toString()};
+    }
+    return null;
+  }
 }
