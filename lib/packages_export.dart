@@ -1,6 +1,7 @@
 // Design Exports
 export 'package:flutter/material.dart';
 export 'package:google_fonts/google_fonts.dart';
+export 'package:social_login_buttons/social_login_buttons.dart';
 
 // Firebase Exports
 export 'package:firebase_core/firebase_core.dart';
@@ -26,3 +27,6 @@ export 'package:provider/provider.dart';
 
 // Other Exports
 export 'package:open_mail_app/open_mail_app.dart';
+
+// Google Auth Export
+export 'package:google_sign_in/google_sign_in.dart';

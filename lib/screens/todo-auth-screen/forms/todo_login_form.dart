@@ -102,7 +102,9 @@ class _TodoLoginFormState extends State<TodoLoginForm> {
                         onTap: () {
                           Navigator.pop(context);
                           CustomizedModelSheets.bottomSheet(
-                              context, const TodoPasswordResetForm());
+                            context,
+                            const TodoPasswordResetForm(),
+                          );
                         },
                         child: RichText(
                           text: TextSpan(
@@ -134,12 +136,11 @@ class _TodoLoginFormState extends State<TodoLoginForm> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                    AuthController.status['message'],
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyMedium
-                                        ?.copyWith(color: primaryColor),
-                                  ),
+                                      AuthController.status['message'],
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium
+                                          ?.copyWith(color: primaryColor)),
                                   backgroundColor:
                                       AuthController.status['code'] == 200
                                           ? Colors.green

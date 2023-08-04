@@ -79,11 +79,12 @@ class _TodoPasswordResetFormState extends State<TodoPasswordResetForm> {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                      AuthController.status['message'],
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium
-                                          ?.copyWith(color: primaryColor)),
+                                    AuthController.status['message'],
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(color: primaryColor),
+                                  ),
                                   backgroundColor:
                                       AuthController.status['code'] == 200
                                           ? Colors.green
@@ -115,7 +116,9 @@ class _TodoPasswordResetFormState extends State<TodoPasswordResetForm> {
                     onTap: () {
                       Navigator.pop(context);
                       CustomizedModelSheets.bottomSheet(
-                          context, const TodoLoginForm());
+                        context,
+                        const TodoLoginForm(),
+                      );
                     },
                     child: RichText(
                       text: TextSpan(

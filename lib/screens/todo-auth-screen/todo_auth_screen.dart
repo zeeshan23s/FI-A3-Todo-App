@@ -15,11 +15,9 @@ class TodoAuthScreen extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                flex: 3,
                 child: Image.asset(appLogo, scale: 2),
               ),
               Expanded(
-                flex: 2,
                 child: Column(
                   children: [
                     SizedBox(
@@ -53,6 +51,30 @@ class TodoAuthScreen extends StatelessWidget {
                             fontWeight: FontWeight.w600, color: primaryColor),
                       ),
                     ),
+                    SizedBox(height: ScreenHelper.screenHeight(context) * 0.05),
+                    SocialLoginButton(
+                        buttonType: SocialLoginButtonType.google,
+                        onPressed: () async {
+                          await context
+                              .read<AuthProvider>()
+                              .googleLogin()
+                              .whenComplete(() {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(AuthController.status['message'],
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyMedium
+                                        ?.copyWith(color: primaryColor)),
+                                backgroundColor:
+                                    AuthController.status['code'] == 200
+                                        ? Colors.green
+                                        : Colors.red,
+                                duration: const Duration(seconds: 2),
+                              ),
+                            );
+                          });
+                        }),
                   ],
                 ),
               )
