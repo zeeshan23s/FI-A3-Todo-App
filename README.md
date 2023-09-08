@@ -17,6 +17,19 @@ The Todo Application is a mobile application that allows users to manage their d
 ### Real-time Sync
 - **Real-time Data Sync**: Task data is stored in Firebase Firestore, ensuring that changes made on one device are instantly reflected on all connected devices, providing a seamless and consistent experience.
 
+## Screenshots
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/c5e2df6c-71af-4e08-9dee-3d16c5d0d3fb" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/f692954c-1c5e-480b-9317-26bdd6aaaaa3" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/71c15167-640d-4383-b6e7-1fc2fe6d5c49" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/37604e68-cdfd-4bf7-a3cc-d659393b0f34" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/61f94186-b066-40ff-b28c-a416d3f28080" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/ec40538f-dc82-4945-a592-fdfe69b32571" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/c48d6cca-f863-4665-90f7-bede15ecf880" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/3a59ecf4-f982-48a3-9dd4-f7a6974ae924" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/37db0e19-352d-41b2-bc82-30df2c7ff1ee" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/1fd85d32-ec23-4b1d-8354-4ba495c795a1" width="200" height="400" /> <nbsp>
+<img src="https://github.com/zeeshan564/FI-A3-Todo-App/assets/97142240/d6294322-bbdd-4d7b-80b6-85d70e18d999" width="200" height="400" />
+
 ## Getting Started
 ### Prerequisites
 Before you start, make sure you have the following installed:
