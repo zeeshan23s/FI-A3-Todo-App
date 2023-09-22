@@ -42,7 +42,7 @@ Before you start, make sure you have the following installed:
 - Clone the repository to your local machine:<br>
 ***git clone https://github.com/zeeshan564/FI-A3-Todo-App.git***
 - Navigate to the project directory:<br>
-***cd todo_application***
+***cd FI-A3-Todo-App***
 - Install the project dependencies:<br>
 ***flutter pub get***
 - Configure Firebase:
