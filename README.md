@@ -40,7 +40,7 @@ Before you start, make sure you have the following installed:
 
 ### Installation
 - Clone the repository to your local machine:<br>
-***git clone https://github.com/your-username/todo_application.git***
+***git clone https://github.com/zeeshan564/FI-A3-Todo-App.git***
 - Navigate to the project directory:<br>
 ***cd todo_application***
 - Install the project dependencies:<br>
